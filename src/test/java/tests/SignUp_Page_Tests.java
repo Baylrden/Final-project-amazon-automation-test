@@ -92,6 +92,7 @@ public class SignUp_Page_Tests {
     @Test(description = "Verify that clicking on amazon logo leads to Amazon homepage")
     public void TC_12(){
 
+
     }
 
 
