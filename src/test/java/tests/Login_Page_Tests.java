@@ -54,7 +54,7 @@ public class Login_Page_Tests {
     public void TC_03() {
 
 
-        loginLocators.loginPageEmailTextbox.sendKeys("gerardoyle02@gmail.com");
+        loginLocators.loginPageEmailTextbox.sendKeys(ConfigReader.getProperty("invalidEmail"));
         loginLocators.loginPageContinueButton.click();
 
         Assert.assertTrue(loginLocators.LoginPageInvalidEmailErrorMessage.isDisplayed());
