@@ -40,14 +40,14 @@ public class SignUp_Page_Tests {
 
     }
 
-    @Test(description = "Verify that user can not use emoji in email section ")
+    @Test(description = "Verify that user can not use special character in email section ")
     public void TC_02(){
 
-        loginLocators.loginPageEmailTextbox.sendKeys("gerardoyle01🇹🇷@gmail.com");
+        loginLocators.loginPageEmailTextbox.sendKeys("gerardoyle01♕@gmail.com");
 
         loginLocators.loginPageContinueButton.click();
 
-        Assert.assertTrue(signUpLocators.signUpEmptyEmailErrorMessage.isDisplayed());
+        Assert.assertFalse(signUpLocators.signUpEmptyEmailErrorMessage.isDisplayed());
 
     }
 

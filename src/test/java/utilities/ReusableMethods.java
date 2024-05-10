@@ -34,6 +34,19 @@ public class ReusableMethods {
         return target;
     }
 
+    public static List<String> stringListeCevir(List<WebElement> webElementList){
+
+        List<String> stringList = new ArrayList<>();
+
+        for (WebElement eachElement : webElementList
+        ) {
+
+            stringList.add(eachElement.getText());
+        }
+
+        return stringList;
+    }
+
 
     //========Switching Window=====//
     public static void switchToWindow(String targetTitle) {
